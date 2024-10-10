@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="content">
+        <div class="images">
+            <img src="images/01.png">
+            <img src="images/02.png">
+            <img src="images/03.png">
+            <img src="images/04.png">
+        </div>
+        <div onClick="side_slide(-1)" class="slide left">
+            <span class="angle-left"><</span>
+        </div>
+        <div onClick="side_slide(1)" class="slide right">
+            <span class="angle-right">></span>
+        </div>
+        <div class="btm-sliders">
+            <span onClick="btm_slide(1)"></span>
+            <span onClick="btm_slide(2)"></span>
+            <span onClick="btm_slide(3)"></span>
+            <span onClick="btm_slide(4)"></span>
+        </div>
+    </div>
+
+    <script>
+        var indexValue = 1;
+        showImage(indexValue);
+
+        function btm_slide(e) { showImage(indexValue = e) }
+        function side_slide(e) { showImage(indexValue += e) }
+        function showImage(e){
+            var i=0;
+            const img=document.querySelectorAll('img');
+            const sliders=document.querySelectorAll('.btm-sliders span');
+            if(e> img.length){indexValue=1}
+            if(e< 1){indexValue=img.length}
+
+            for(i=0; i< img.length; i++){
+                img[i].style.display="none";
+            }
+            for(i=0; i< sliders.length; i++){
+                sliders[i].style.background="rgba(255, 255, 255, 0.1)";
+            }
+            sliders[indexValue-1].style.background="orange";
+            img[indexValue-1].style.display="block";
+        }
+    </script>
+
+</body>
+
+</html>

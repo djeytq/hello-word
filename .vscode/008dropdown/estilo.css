@@ -1,0 +1,35 @@
+ul{
+    list-style: none;
+    overflow: hidden;
+    background: #000;
+}
+li{
+    float: left;
+}
+
+li a{
+    display: inline-block;
+    color: #fff; 
+     padding: 14px 16px; 
+     text-decoration: none;
+} 
+li a:hover, .dp:hover .dpbt{
+    background: red;
+}
+li .dpct{
+    display: none;
+    position: absolute;
+    background: #fff;
+    width: 150px;
+}
+.dpct a{
+    color: #000;
+    display: block;
+    text-align: left;
+}
+.dp:hover .dpct{
+    display: block;
+}
+/* .dpct{
+    display: block;
+} */

@@ -1,0 +1,2 @@
+import  "./soma";
+alert(A)

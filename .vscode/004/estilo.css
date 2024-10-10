@@ -1,0 +1,7 @@
+.entrada[type="text"]{
+    background: yellowgreen;
+}
+select option[value="s"]{
+    background: rebeccapurple;
+    color: red;
+}

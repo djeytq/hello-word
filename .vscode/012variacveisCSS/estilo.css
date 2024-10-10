@@ -1,0 +1,12 @@
+:root{ 
+    --corpadrao:blue;
+}
+div{
+    --r:red;
+}
+div{
+    background: var(--corpadrao);
+    color: var(--r);
+    object-fit: none;
+    filter: contrast(pink);
+}
